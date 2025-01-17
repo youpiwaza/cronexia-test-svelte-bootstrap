@@ -21,17 +21,83 @@ Ajout de bootstrap
 Portage [sveltestrap](https://sveltestrap.js.org/?path=/docs/sveltestrap-overview--docs)
 
 ```bash
+# 🚨 cd my-app
 bun add svelte @sveltestrap/sveltestrap
 ```
 
-Bootstrap CSS
+## Bootstrap CSS
+
+⚡️Note: mise en place du socle > Récupérer les fichiers plutôt que CDN lol
+
+Add to your apps static index.html file
 
 cronexia-test-svelte-bootstrap/my-app/src/app.html
 
-dans head
-
+```html
+<!-- dans <head> -->
 <!-- Bootstrap -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 />
+```
+
+---
+
+Add to your main App.svelte file
+
+cronexia-test-svelte-bootstrap/my-app/src/routes/+page.svelte
+
+```svelte
+<svelte:head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</svelte:head>
+```
+
+---
+
+Import the styles directly in your CSS bundle
+
+cronexia-test-svelte-bootstrap/my-app/src/routes/+page.svelte > fin de page
+
+```html
+<style>
+  @import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+</style>
+```
+
+---
+
+Use the provided Styles component
+
+```svelte
+<script>
+  import { Styles } from '@sveltestrap/sveltestrap';
+</script>
+
+<Styles />
+```
+
+---
+
+Then use Sveltestrap components in your svelte component:
+
+```svelte
+<script>
+  import { Button, Col, Row } from '@sveltestrap/sveltestrap';
+</script>
+
+<Row>
+  <Col>
+    <Button color="primary" outline>Hello World!</Button>
+  </Col>
+</Row>
+```
+
+✅📌 test > le bouton est la & fonctionnel
+
+---
+
+## Bootstrap Icons
+
+hey

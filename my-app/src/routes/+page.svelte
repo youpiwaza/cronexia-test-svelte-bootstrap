@@ -2,11 +2,21 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
+
+	// Bootstrap
+	import { Styles } from '@sveltestrap/sveltestrap';
+
+	// Bootstrap test
+	import { Button, Col, Row } from '@sveltestrap/sveltestrap';
 </script>
+
+<Styles />
 
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </svelte:head>
 
 <section>
@@ -25,10 +35,18 @@
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
+	<Row>
+		<Col>
+			<Button color="primary" outline>Hello World!</Button>
+		</Col>
+	</Row>
+
 	<Counter />
 </section>
 
 <style>
+	@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+
 	section {
 		display: flex;
 		flex-direction: column;
