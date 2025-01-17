@@ -100,4 +100,32 @@ Then use Sveltestrap components in your svelte component:
 
 ## Bootstrap Icons
 
-hey
+If you want to use the Icon component, you also must include a link to Bootstrap Icon CSS, for example:
+
+✨ or the Styles component includes the Bootstrap Icon CSS by default:
+
+[bootstrap icons](https://icons.getbootstrap.com/)
+
+✅📌 test
+
+```html
+<Button color="primary" outline>Hello World! <i class="bi bi-airplane-engines"></i></Button>
+```
+
+---
+
+## Sapper
+
+what is that
+
+[sapper](https://sapper.svelte.dev/) > The predecessor of SvelteKit
+
+yeah bah non du coup
+
+---
+
+## Essai d'un composant au pif
+
+✅📌 [listgroup](https://sveltestrap.js.org/?path=/docs/components-listgroup--docs)
+
+Impecab'

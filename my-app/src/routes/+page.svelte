@@ -8,6 +8,18 @@
 
 	// Bootstrap test
 	import { Button, Col, Row } from '@sveltestrap/sveltestrap';
+
+	import { ListGroup, ListGroupItem } from '@sveltestrap/sveltestrap';
+  const colors = [
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'light',
+    'dark'
+  ];
 </script>
 
 <Styles />
@@ -16,6 +28,7 @@
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </svelte:head>
 
@@ -34,10 +47,24 @@
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
+	
+	<br>
 
 	<Row>
 		<Col>
-			<Button color="primary" outline>Hello World!</Button>
+			<Button color="primary" outline><i class="bi bi-airplane-engines"></i> Hello World! <i class="bi bi-airplane-engines"></i></Button>
+		</Col>
+	</Row>
+
+	<br>
+
+	<Row>
+		<Col>
+			<ListGroup>
+				{#each colors as color}
+					<ListGroupItem {color}>{color}</ListGroupItem>
+				{/each}
+			</ListGroup>
 		</Col>
 	</Row>
 
